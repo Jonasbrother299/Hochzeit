@@ -106,7 +106,7 @@ const Navbar = () => {
                     transitionDelay: navOpen ? "0.1s" : "0s",
                   }}
                 >
-                  Contact
+                  Kontakt
                 </Link>
                 <div className="nav-item-wrapper"></div>
               </motion.li>
@@ -161,7 +161,7 @@ const Navbar = () => {
               >
                 <span>Lilith & Bastian</span>
               </div>
-              <div className="nav-social-media">
+              {/* <div className="nav-social-media">
                 <ul>
                   <motion.li
                     whileHover={{ scale: 1.1 }}
@@ -211,7 +211,7 @@ const Navbar = () => {
                     </a>
                   </motion.li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

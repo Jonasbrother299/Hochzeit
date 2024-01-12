@@ -15,6 +15,8 @@
     padding: 100px;
     height: "auto";
     background-color: #196709;
+    flex-wrap: wrap; 
+    min-width: 700px;
 }
 
 .cardWrapper {
@@ -22,6 +24,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     color: #ffffff;
+    flex-wrap: wrap; 
 }
 
 .card {
@@ -155,4 +158,37 @@
 }
 .listUL li{
     margin: 10px;
+}
+
+.link {
+    color: rgb(127, 212, 255);
+}
+
+
+@media (max-width: 1200px) {
+    .cardContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        height: "auto";
+        background-color: #196709;
+        flex-wrap: wrap; 
+        min-width: 400px;
+    }
+.cardWrapper {
+    grid-template-columns: repeat(1, 1fr);
+}
+.card:nth-child(1),
+.card:nth-child(2),.card:nth-child(3),.card:nth-child(4) {
+    grid-column: span 1;
+    /* Makes the first and fourth card span two columns */
+}
+
+.description {
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 70%;
+    margin-bottom: 50px;
+}
 }

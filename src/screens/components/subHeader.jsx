@@ -11,13 +11,13 @@ export default function SubHeader() {
           <Link to="/Programm">Programm</Link>
         </li>
         <li>
-          <Link to="/Contact">Contact</Link>
+          <Link to="/Contact">Kontakt</Link>
         </li>
         <li>
           <Link to="/Infos">Infos</Link>
         </li>
         <li>
-          <Link to="/PostWeddingSite">Afterwards Programm</Link>
+          <Link to="/PostWeddingSite">Hochzeitsbildergalerie</Link>
         </li>
       </ul>
     </div>

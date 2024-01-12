@@ -34,8 +34,8 @@ const Infos = () => {
               <ul className="listUL">
                 <li> Datum: 23.-25.8.2024</li>
                 <li>
-                  Location: Uhlandhof (Uhlandhof 1; 73110 Hattenhofen)
-                  <a href="https://www.google.com/maps/place/Uhlandhof+1,+73110+Hattenhofen/@48.658989,9.5633567,17z/data=!3m1!4b1!4m6!3m5!1s0x4799a2b0ccab9485:0xd6022570cb58c59b!8m2!3d48.658989!4d9.565937!16s%2Fg%2F11cplcg1kb?entry=ttu">
+                  Location: Uhlandhof (Uhlandhof 1; 73110 Hattenhofen) 
+                  <a className="link"href="https://www.google.com/maps/place/Uhlandhof+1,+73110+Hattenhofen/@48.658989,9.5633567,17z/data=!3m1!4b1!4m6!3m5!1s0x4799a2b0ccab9485:0xd6022570cb58c59b!8m2!3d48.658989!4d9.565937!16s%2Fg%2F11cplcg1kb?entry=ttu">
                     Google Maps
                   </a>
                 </li>

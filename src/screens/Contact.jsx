@@ -5,6 +5,7 @@ import "../styles/components/ContactForm.css";
 import { Link } from "react-router-dom";
 import transition from "../transition";
 const ContactForm = () => {
+
   const [formData, setFormData] = useState({
     attendance: "", // 'coming' or 'notComing'
     selectedDays: [], // Array to store selected days (e.g., ['Freitag', 'Samstag'])
@@ -100,30 +101,52 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      // Create a new document in the "ContactForm" collection
-      const contactsCollection = collection(firestore, "ContactForm");
-      const contactDocRef = await addDoc(contactsCollection, formData);
-
-      // Log the ID of the newly created document
-      console.log("Contact added successfully with ID:", contactDocRef.id);
-
-      // If there are persons in the state, add them to the "persons" subcollection
-      if (persons.length > 0) {
-        const personsCollection = collection(
-          contactsCollection,
-          contactDocRef.id,
-          "persons"
-        );
-
-        // Add each person to the "persons" subcollection
-        persons.forEach(async (person) => {
-          await addDoc(personsCollection, person);
-        });
+      if (formData.attendance === "coming") {
+        // Check if at least one day is selected
+        if (formData.selectedDays.length === 0) {
+          alert("Bitte wählen Sie mindestens einen Tag aus.");
+          return; // Stop form submission if no day is selected
+        }
       }
+      const isAnyAdditionalPersonDayEmpty = persons.some((person) => person.selectedDays.length === 0);
 
-      // Optionally, you can reset the form or show a success message.
+       if (isAnyAdditionalPersonDayEmpty) {
+        alert("Bitte wählen Sie mindestens einen Tag für jede zusätzliche Person aus.");
+        return; // Stop form submission if any additional person has no day selected
+      }
+      // Create a new document for the initial person in the "Persons" collection
+      const personsCollection = collection(firestore, "Persons");
+      const initialPersonDocRef = await addDoc(personsCollection, {
+        name: formData.name,
+        email: formData.email,
+        attendance: formData.attendance,
+        selectedDays: formData.selectedDays,
+        foodChoice: formData.foodChoice,
+        accommodationChoice: formData.accommodationChoice,
+        supportChoice: formData.supportChoice,
+        message: formData.message,
+        // Add other fields as needed
+      });
+  
+      console.log("Initial person added with ID:", initialPersonDocRef.id);
+  
+      // Iterate over additional persons and add them to the database
+      for (const person of persons) {
+        if (person.name) { // Only add if the person has a name
+          await addDoc(personsCollection, {
+            name: person.name,
+            selectedDays: person.selectedDays,
+            foodChoice: person.foodChoice,
+            accommodationChoice: person.accommodationChoice,
+            supportChoice: person.supportChoice,
+            referenceToInitialPerson: initialPersonDocRef.id, // Referencing the initial person
+          });
+        }
+      }
+    
+      // Optionally, you can reset the form or show a success message
       setFormData({
         attendance: "",
         selectedDays: [],
@@ -134,17 +157,16 @@ const ContactForm = () => {
         accommodationChoice: "",
         supportChoice: "",
       });
-      setPersons([{ name: "" }]);
-
+      setPersons([{ name: "", selectedDays: [], foodChoice: "", accommodationChoice: "", supportChoice: "" }]);
+      window.location.href = "/";  
       // Show a success message to the user
       alert("Contact submitted successfully!");
     } catch (error) {
       console.error("Error adding contact:", error);
-      // Handle the error, show an error message, or log the error as needed.
+      // Handle the error, show an error message, or log the error as needed
       alert("Error submitting contact. Please try again.");
     }
   };
-
   return (
     <div>
       <div className="backgroundHeadline">
@@ -232,6 +254,7 @@ const ContactForm = () => {
                   <div>
                     <label>
                       <input
+                      
                         type="checkbox"
                         name="selectedDays"
                         value="Freitag"
@@ -244,7 +267,8 @@ const ContactForm = () => {
                   <div>
                     <label>
                       <input
-                        type="checkbox"
+                       
+                       type="checkbox"
                         name="selectedDays"
                         value="Samstag"
                         checked={formData.selectedDays.includes("Samstag")}
@@ -256,6 +280,7 @@ const ContactForm = () => {
                   <div>
                     <label>
                       <input
+                        
                         type="checkbox"
                         name="selectedDays"
                         value="Sonntag"
@@ -273,6 +298,7 @@ const ContactForm = () => {
                   <label>
                     Essen:
                     <select
+                       required
                       name="foodChoice"
                       value={formData.foodChoice}
                       onChange={handleChange}
@@ -291,6 +317,7 @@ const ContactForm = () => {
                   <label>
                     Übernachtung:
                     <select
+                       required
                       name="accommodationChoice"
                       value={formData.accommodationChoice}
                       onChange={handleChange}
@@ -309,6 +336,7 @@ const ContactForm = () => {
                   <label>
                     Unterstützung:
                     <select
+                       required
                       name="supportChoice"
                       value={formData.supportChoice}
                       onChange={handleChange}
@@ -330,6 +358,7 @@ const ContactForm = () => {
 
               <div className="inputbox">
                 <input
+                   required
                   type="text"
                   name="email"
                   value={formData.email}
@@ -354,6 +383,7 @@ const ContactForm = () => {
                   <div className="label-container">
                     <div className="inputbox">
                       <input
+                         required
                         type="text"
                         value={person.name}
                         onChange={(e) =>
@@ -369,6 +399,7 @@ const ContactForm = () => {
                       <div>
                         <label>
                           <input
+                         
                             type="checkbox"
                             name="selectedDays"
                             value="Freitag"
@@ -383,6 +414,7 @@ const ContactForm = () => {
                       <div>
                         <label>
                           <input
+                        
                             type="checkbox"
                             name="selectedDays"
                             value="Samstag"
@@ -397,6 +429,7 @@ const ContactForm = () => {
                       <div>
                         <label>
                           <input
+                       
                             type="checkbox"
                             name="selectedDays"
                             value="Sonntag"
@@ -416,6 +449,7 @@ const ContactForm = () => {
                       <label>
                         Essen:
                         <select
+                           required
                           name="foodChoice"
                           value={persons.foodChoice}
                           onChange={handlePersonChange}
@@ -434,6 +468,7 @@ const ContactForm = () => {
                       <label>
                         Übernachtung:
                         <select
+                           required
                           name="accommodationChoice"
                           value={persons.accommodationChoice}
                           onChange={handlePersonChange}
@@ -452,6 +487,7 @@ const ContactForm = () => {
                       <label>
                         Unterstützung:
                         <select
+                           required
                           name="supportChoice"
                           value={persons.supportChoice}
                           onChange={handlePersonChange}

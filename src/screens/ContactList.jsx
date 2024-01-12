@@ -1,92 +1,71 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { firestore } from "../config/firebaseConfig";
 
 const ContactList = () => {
-  const [contacts, setContacts] = useState([]);
+  const [initialPersons, setInitialPersons] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const contactsCollection = collection(firestore, "ContactForm");
-        const querySnapshot = await getDocs(contactsCollection);
-
-        const contactsData = querySnapshot.docs.map(async (doc) => {
-          const contactData = {
+        // Fetch all person documents
+        const personsSnapshot = await getDocs(collection(firestore, "Persons"));
+        
+        // Filter out documents without 'referenceToInitialPerson' field to get initial persons
+        const initialPersonsData = personsSnapshot.docs
+          .filter((doc) => doc.data().referenceToInitialPerson === undefined)
+          .map((doc) => ({
             id: doc.id,
             ...doc.data(),
-            persons: [],
-          };
-
-          // Fetch persons from the subcollection
-          const personsCollection = collection(
-            firestore,
-            "ContactForm",
-            doc.id,
-            "persons"
-          );
-          const personsQuerySnapshot = await getDocs(personsCollection);
-
-          contactData.persons = personsQuerySnapshot.docs.map((personDoc) => ({
-            personId: personDoc.id,
-            ...personDoc.data(),
+            associatedPersons: [],
           }));
-
-          return contactData;
+        
+        // Build a map of initial persons for quick lookup
+        const initialPersonsMap = initialPersonsData.reduce((acc, current) => {
+          acc[current.id] = current;
+          return acc;
+        }, {});
+        
+        // Append associated persons to their respective initial person
+        personsSnapshot.docs.forEach((personDoc) => {
+          const personData = personDoc.data();
+          if (personData.referenceToInitialPerson && initialPersonsMap[personData.referenceToInitialPerson]) {
+            initialPersonsMap[personData.referenceToInitialPerson].associatedPersons.push({
+              id: personDoc.id,
+              ...personData,
+            });
+          }
         });
-
-        // Resolve the promises and set the state
-        const resolvedContactsData = await Promise.all(contactsData);
-        setContacts(resolvedContactsData);
+  
+        // Convert the map back to an array
+        const initialPersonsArray = Object.values(initialPersonsMap);
+  
+        setInitialPersons(initialPersonsArray);
       } catch (error) {
-        console.error("Error fetching contacts:", error);
+        console.error("Error fetching persons:", error);
       }
     };
+  
     fetchData();
   }, []);
+  // Console log the state to see if it is populated
+  console.log("Initial persons state: ", initialPersons);
 
   return (
     <div>
       <h2>Contact List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Attendance</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Food Choice</th>
-            <th>Accommodation Choice</th>
-            <th>Support Choice</th>
-            <th>Persons</th>
-            {/* Add more table headers for other fields */}
-          </tr>
-        </thead>
-        <tbody>
-          {contacts.map((contact) => (
-            <tr key={contact.id}>
-              <td>{contact.id}</td>
-              <td>{contact.attendance}</td>
-              <td>{contact.name}</td>
-              <td>{contact.email}</td>
-              <td>{contact.message}</td>
-              <td>{contact.foodChoice}</td>
-              <td>{contact.accommodationChoice}</td>
-              <td>{contact.supportChoice}</td>
-              <td>
-                <tr>
-                  {contact.persons &&
-                    contact.persons.map((person, index) => (
-                      <td key={index}>{person.name}</td>
-                    ))}
-                </tr>
-              </td>
-              {/* Add more table cells for other fields */}
-            </tr>
+      {initialPersons.map((initialPerson) => (
+        <div key={initialPerson.id}>
+          <h3>Initial Person: {initialPerson.name}</h3>
+          <p>Email: {initialPerson.email}</p>
+          <h4>Associated Persons:</h4>
+          {initialPerson.associatedPersons.map((person) => (
+            <div key={person.id}>
+              <p>Name: {person.name}</p>
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+      ))}
     </div>
   );
 };
