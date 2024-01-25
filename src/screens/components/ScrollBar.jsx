@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import "../../styles/components/ScrollBar.css";
+import "../../styles/components/Scrollbar.css";
 
 export default function ScrollBar() {
   useEffect(() => {
