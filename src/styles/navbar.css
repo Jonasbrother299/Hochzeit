@@ -211,7 +211,7 @@ ul.nav-links li a:hover {
 
 @media (max-width: 600px) {
     ul.nav-links li a {
-        font-size: 2.5em;
+        font-size: 2.0em;
     }
 
     .nav-overlay {
