@@ -326,6 +326,7 @@ const ContactForm = () => {
                       <option value="Zelt">Zelt</option>
                       <option value="Auto">Auto</option>
                       <option value="Hotel">Hotel</option>
+                      <option value="Hotel Selbstständig">Hotel (selbstständig)</option>
                       <option value="Nein">Nein</option>
                     </select>
                   </label>
@@ -371,12 +372,12 @@ const ContactForm = () => {
               <div className="inputbox">
                 <textarea
                   type="text"
-                  name="comment"
+                  name="message"
                   value={formData.message}
                   onChange={handleChange}
                   disabled={false}
                 />
-                <span className="inputbox__placeholder"> Kommentar</span>
+                <span className="inputbox__placeholder">Kommentar</span>
               </div>
               <div>
                 {persons.map((person, index) => (
@@ -477,6 +478,7 @@ const ContactForm = () => {
                           <option value="Zelt">Zelt</option>
                           <option value="Auto">Auto</option>
                           <option value="Hotel">Hotel</option>
+                          <option value="Hotel Selbstständig">Hotel (selbstständig)</option>
                           <option value="Nein">Nein</option>
                         </select>
                       </label>
