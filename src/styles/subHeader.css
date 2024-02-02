@@ -2,6 +2,7 @@
     width: 100%;
     height: 25vh;
     padding: 50px;
+    transition: 0.3s;
 }
 
 .subHeader__container ul{
@@ -11,10 +12,12 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        transition: 0.3s;
 }
 .subHeader__container ul li{
 list-style: none;
     position: relative;
+    transition: 0.3s;
 }
 .subHeader__container ul li a{
         text-decoration: none;
@@ -37,31 +40,60 @@ list-style: none;
 }
 @media screen and (max-width: 1200px) {
     .subHeader__container ul {
+        transition: 0.3s;
             padding: 1cqh;
         }
     .subHeader__container ul li a {
         text-decoration: none;
         color: beige;
-        font-size: 1.0rem;
+        font-size: 1.7rem;
         top: 0;
         transition: 1s cubic-bezier(0.16, 1, 0.1, 1);
         color: black;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .subHeader__container {
         width: 100%;
         height: 15vh;
-        padding: 50px;
+        padding-top: 40px;
+        padding-left: 20px;
+        transition: 0.3s;
     }    
     .subHeader__container ul {
+            padding: 1px;
+            transition: 0.3s;
+        }
+    .subHeader__container ul li a {
+        text-decoration: none;
+        color: beige;
+        font-size: 1.4rem;
+        top: 0;
+        transition: 1s cubic-bezier(0.16, 1, 0.1, 1);
+        color: black;
+
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .subHeader__container {
+        width: 100%;
+        height: 15vh;
+        padding-top: 40px;
+        padding-left: 20px;
+        transition: 0.3s;
+    }    
+    .subHeader__container ul {
+        transition: 0.3s;
             padding: 1px;
         }
     .subHeader__container ul li a {
         text-decoration: none;
         color: beige;
-        font-size: 0.8rem;
+        font-size: 1rem;
         top: 0;
         transition: 1s cubic-bezier(0.16, 1, 0.1, 1);
         color: black;

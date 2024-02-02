@@ -7,35 +7,63 @@
     padding: 50px;
     justify-content: space-between;
     color: beige;
+    transition: 0.2s;
 }
 .programm_container{
     width: 100%;
     margin: 40px;
     padding: 20px;
+    transition: 0.2s;
 }
 
 .nested-list {
     list-style-type: square;
     margin-left: 20px;
     margin-top: 20px;
+    transition: 0.2s;
 }
 .ListHeader::after {
     content: "";
     position: absolute;
     width: 800px;
-
     left: 50px;
     transform: translate(0px, 35px);
     height: 2px;
     background-color: #106100;
+    transition: 0.2s;
 }
 .ListHeader {
     font-size: 1.5em;
     margin: 10px;
     margin-top: 30px;
+    transition: 0.2s;
 }
 
 .nested-listText{
     margin: 7.5px;
     font-size: 1.1em;
+    transition: 0.2s;
+}
+
+
+@media (max-width: 700px) { 
+    .grid__header {
+        transition: 0.2s;
+        height: 120px;
+        padding: 30px;
+
+    }
+    .ListHeader::after {
+        transition: 0.2s;
+        width: 300px;
+        left: 50px;
+
+    }
+    .programm_container{
+        transition: 0.2s;
+        width: 100%;
+        margin: 0px;
+        padding: 20px;
+    }
+    
 }

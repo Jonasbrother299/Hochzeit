@@ -181,7 +181,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="wrapper">
           <label>
-            <div className="label-container">
+            <div className="label-container_zusage">
               <label
                 style={{
                   display: "flex",
