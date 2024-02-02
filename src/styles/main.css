@@ -45,8 +45,8 @@ body,
     height: 100vh;
     background: url("../assets/Hero.jpeg") center/cover;
     background-position: -440px;
-    object-fit: cover;
-    background-attachment: fixed;
+    /* object-fit: cover; */
+    /* background-attachment: fixed; */
 }
 
 }
