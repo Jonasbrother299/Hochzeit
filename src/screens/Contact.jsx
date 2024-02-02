@@ -340,7 +340,6 @@ const ContactForm = () => {
                       <option value="Sonntag Abbau">Sonntag Abbau</option>
                       <option value="Kuchen">Kuchen</option>
                       <option value="Büffet">Büffet</option>
-                      <option value="Garnichts">Garnichts</option>
                     </select>
                   </label>
                   <br />
@@ -488,7 +487,6 @@ const ContactForm = () => {
                           <option value="Sonntag Abbau">Sonntag Abbau</option>
                           <option value="Kuchen">Kuchen</option>
                           <option value="Büffet">Büffet</option>
-                          <option value="Garnichts">Garnichts</option>
                         </select>
                       </label>
                       <br />
