@@ -85,7 +85,7 @@
     transition: background-color 0.3s;
 }
 .card:nth-child(4):hover::before {
-    background-color: rgba(27, 27, 27, 0.667);
+    background-color: rgba(27, 27, 27, 0.756);
     /* Slightly brighter on hover */
 }
 .card:nth-child(3)::before {
@@ -102,7 +102,7 @@
         transition: background-color 0.3s;
 }
 .card:nth-child(3):hover::before {
-    background-color: rgba(27, 27, 27, 0.667);
+    background-color: rgba(27, 27, 27, 0.756);
     /* Slightly brighter on hover */
 }
 
@@ -121,7 +121,7 @@
 }
 
 .card:nth-child(2):hover::before {
-    background-color: rgba(27, 27, 27, 0.667);
+    background-color: rgba(27, 27, 27, 0.756);
     /* Slightly brighter on hover */
 }
 
@@ -140,7 +140,7 @@
 }
 
 .card:nth-child(1):hover::before {
-    background-color: rgba(27, 27, 27, 0.667);
+    background-color: rgba(27, 27, 27, 0.756);
     /* Slightly brighter on hover */
 }
 .content {
@@ -166,6 +166,11 @@
 
 
 @media (max-width: 1200px) {
+    .descriptionText {
+        font-size: 1.3em;
+        margin-top: 20px;
+        letter-spacing: -0.05px;
+    }
     .cardContainer {
         display: flex;
         justify-content: center;

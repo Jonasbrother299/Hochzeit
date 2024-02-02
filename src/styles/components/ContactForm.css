@@ -368,3 +368,11 @@ font-size: 1.2em;
     background-color: rgb(233, 233, 83);
 }
 
+
+
+.plusbutton_container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

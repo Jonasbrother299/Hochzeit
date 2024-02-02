@@ -16,15 +16,7 @@ const ContactForm = () => {
     accommodationChoice: "", // 'Zelt', 'Auto', 'Hotel', 'Nein'
     supportChoice: "", // 'Donnerstag Aufbau', 'Sonntag Abbau', 'Kuchen', 'Büffet', 'Garnichts'
   });
-  const [persons, setPersons] = useState([
-    {
-      name: "",
-      selectedDays: [],
-      foodChoice: "",
-      accommodationChoice: "", // 'Zelt', 'Auto', 'Hotel', 'Nein'
-      supportChoice: "",
-    },
-  ]);
+  const [persons, setPersons] = useState([]);
 
   console.log(persons);
   const handleAddPerson = () => {
@@ -304,7 +296,7 @@ const ContactForm = () => {
                       onChange={handleChange}
                     >
                       <option value="">Wähle eine Option</option>
-                      <option value="Normal">Normal</option>
+                      <option value="Alles">Alles</option>
                       <option value="Vegetarisch">Vegetarisch</option>
                       <option value="Vegan">Vegan</option>
                       <option value="Nichts">Nichts</option>
@@ -325,7 +317,6 @@ const ContactForm = () => {
                       <option value="">Wähle eine Option</option>
                       <option value="Zelt">Zelt</option>
                       <option value="Auto">Auto</option>
-                      <option value="Hotel">Hotel</option>
                       <option value="Hotel Selbstständig">Hotel (selbstständig)</option>
                       <option value="Nein">Nein</option>
                     </select>
@@ -335,7 +326,7 @@ const ContactForm = () => {
                 <div>
                   {/* Unterstützung (Support) */}
                   <label>
-                    Unterstützung:
+                    Unterstützung (freiwillig):
                     <select
                        required
                       name="supportChoice"
@@ -400,7 +391,6 @@ const ContactForm = () => {
                       <div>
                         <label>
                           <input
-                         
                             type="checkbox"
                             name="selectedDays"
                             value="Freitag"
@@ -415,7 +405,6 @@ const ContactForm = () => {
                       <div>
                         <label>
                           <input
-                        
                             type="checkbox"
                             name="selectedDays"
                             value="Samstag"
@@ -430,7 +419,6 @@ const ContactForm = () => {
                       <div>
                         <label>
                           <input
-                       
                             type="checkbox"
                             name="selectedDays"
                             value="Sonntag"
@@ -456,7 +444,7 @@ const ContactForm = () => {
                           onChange={handlePersonChange}
                         >
                           <option value="">Wähle eine Option</option>
-                          <option value="Normal">Normal</option>
+                          <option value="Alles">Alles</option>
                           <option value="Vegetarisch">Vegetarisch</option>
                           <option value="Vegan">Vegan</option>
                           <option value="Nichts">Nichts</option>
@@ -477,7 +465,6 @@ const ContactForm = () => {
                           <option value="">Choose an option</option>
                           <option value="Zelt">Zelt</option>
                           <option value="Auto">Auto</option>
-                          <option value="Hotel">Hotel</option>
                           <option value="Hotel Selbstständig">Hotel (selbstständig)</option>
                           <option value="Nein">Nein</option>
                         </select>
@@ -487,7 +474,7 @@ const ContactForm = () => {
                     <div>
                       {/* Unterstützung (Support) */}
                       <label>
-                        Unterstützung:
+                      Unterstützung (freiwillig):
                         <select
                            required
                           name="supportChoice"
@@ -513,11 +500,13 @@ const ContactForm = () => {
                     </button>
                   </div>
                 ))}
+                <div className="plusbutton_container">
                 <input
                   type="checkbox"
                   class="plus-minus"
                   onClick={handleAddPerson}
-                />
+                /> <p>Weitere Person</p>
+                </div>
                 {/* <button onClick={handleAddPerson}>Add Person</button> */}
               </div>
               {/* Add new Person */}

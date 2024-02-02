@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/components/Programm.css";
 import transition from "../transition";
 
 const Programm = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <div className="grid__header">
@@ -21,15 +26,15 @@ const Programm = () => {
               Mittagessen/Snacks zwischen 13 und 15 Uhr
             </li>
             <li class="nested-listText">
-              Abendessen (Pizza) voraussichtlich zwischen 18 bis 22 Uhr
+              Abendessen (Pizza) voraussichtlich zwischen 18 und 22 Uhr
             </li>
             <li class="nested-listText">
-              Gemütliches zusammen sitzen (IrischerAbend)
+            Gemütliches Zusammensitzen
             </li>
           </ul>
           <li className="ListHeader">Samstag</li>
           <ul class="nested-list">
-            <li class="nested-listText">Frühstück ab 8 Uhr</li>
+            <li class="nested-listText">Fruhstücksbuffet ab 8 Uhr</li>
             <li class="nested-listText">Trauzeremonie ca. 10 Uhr</li>
             <li class="nested-listText">Gemeinsame Bilder</li>
             <li class="nested-listText">
@@ -37,8 +42,7 @@ const Programm = () => {
             </li>
             <li class="nested-listText">Spiele, Spaß und Freizeit</li>
             <li class="nested-listText">
-              Abendessen (Maultaschen Variationen) voraussichtlich zwischen 18
-              bis 22 Uhr
+            Abendessen : 19:00 Uhr 
             </li>
             <li class="nested-listText">Party</li>
           </ul>

@@ -28,6 +28,10 @@ list-style: none;
         color: black;
 }
 
+.subHeader__container ul li a:hover{
+    color: rgb(255, 123, 0);
+    transition: 1s cubic-bezier(0.16, 1, 0.1, 1);
+}
 @media screen and (max-width: 2000px) {
 .subHeader__container ul li a {
         text-decoration: none;

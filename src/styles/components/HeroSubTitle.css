@@ -6,8 +6,8 @@
     align-items: center;
     height: 35vh;
     left: 50%;
-        flex-direction: column;
-    /* transform: translate(-50%, 20%); */
+    flex-direction: column;
+    transform: translate(0%, -10%); 
     color: white;
     background: #106100;
     z-index: 3;

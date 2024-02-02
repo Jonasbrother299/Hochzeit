@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
-
 import state from "../store";
 import { close } from "../assets";
 import "../styles/navbar.css";
@@ -15,6 +14,21 @@ const Navbar = () => {
   };
 
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (navOpen) {
+      // Disable scrolling by adding 'overflow: hidden' to the body
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Enable scrolling by removing 'overflow' property from the body
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup function to ensure scrolling is enabled when the component unmounts
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [navOpen]);
   return (
     <AnimatePresence>
       <div className="nav">
@@ -146,7 +160,7 @@ const Navbar = () => {
                     transitionDelay: navOpen ? "0.1s" : "0s",
                   }}
                 >
-                  Post Wedding
+                 Fotos
                 </Link>
                 <div className="nav-item-wrapper"></div>
               </motion.li>

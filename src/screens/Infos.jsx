@@ -40,9 +40,9 @@ const Infos = () => {
                   </a>
                 </li>
                 <li> Kleidung: Leger. Unbedingt Wetterabhängig</li>
-                <li>Unser Haushalt ist komplett, darum wäre es sehr nett, wenn ihr an unsere Zukunft denkt,
-und uns Futter für das Sparschwein schenkt 😉
-</li>
+                <li>Geschenk: Unser Haushalt ist komplett, darum wäre es sehr nett, wenn ihr an unsere Zukunft denkt,
+                    und uns Futter für das Sparschwein schenkt 😉
+                    </li>
               </ul>
               <p></p>
             </div>
@@ -51,7 +51,7 @@ und uns Futter für das Sparschwein schenkt 😉
             <div className="content">
               <h3>Unterstützung während dem Fest</h3>
               <p className="contentText">
-              Da ein solch großen Fest über mehrere Tage nicht ohne Helfer funktioniert wird es vor Ort Helferlisten geben (Tischdecken/abräumen, spülen und andere allgemeine Punkte) in die sich eingetragen werden soll. Vielen Dank dafür schonmal im Voraus.
+              Da ein solch großes Fest über mehrere Tage nicht ohne Helfer funktioniert wird es vor Ort Helferlisten geben (Tisch decken/abräumen, spülen und andere allgemeine Punkte) in die sich eingetragen werden soll. Vielen Dank dafür schonmal im Voraus.
               </p>
             </div>
           </div>
@@ -60,7 +60,7 @@ und uns Futter für das Sparschwein schenkt 😉
               <h3>Camping Informationen</h3>
               <ul className="listUL">
                 <li>Es gibt genügend Platz für eurer Zelte, Camper und Autos.</li>
-                <li>Bitte alles, was Ihr zum campen benötigt (Schlafsack, Isomatte, Zelt….) selber mitbringen</li>
+                <li>Bitte alles, was Ihr zum Campen benötigt (Schlafsack, Isomatte, Zelt….) selber mitbringen</li>
                 <li>Es wird verschiede Camping-Bereiche geben (Für diejenigen die es gerne ruhiger hätten und für die, die direkt von der Festscheune in den Schlafsack hüpfen wollen). </li>
                 <li>Es wird wahrscheinlich keinen Strom an den Campingplätzen direkt geben.</li>
                 <li>Es gibt ausreichen Toiletten und Waschbecken aber keine richtigen duschen (Campingduschen / Eimer etc. können verwendet werden 😉).</li>
@@ -74,7 +74,7 @@ und uns Futter für das Sparschwein schenkt 😉
               <p className="contentText">
                 Wir freuen uns sehr über Beiträge zu Programm, Spielideen oder
                 kleine Überraschungen. Dies bitte unbedingt mit Liliths
-                Trauzeugin Jenny absprchen. Jennys mail: jbenedikt@gmx.de + Telefonnummer von Jenny.
+                Trauzeugin Jenni absprechen Email: <a href="mailto:jbenedikt@gmx.de">jbenedikt@gmx.de</a>.
               </p>
             </div>
           </div>
