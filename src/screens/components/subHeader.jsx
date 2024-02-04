@@ -11,7 +11,7 @@ export default function SubHeader() {
           <Link to="/Programm">Programm</Link>
         </li>
         <li>
-          <Link to="/Contact">Kontakt</Link>
+          <Link to="/Contact">Rückmeldung</Link>
         </li>
         <li>
           <Link to="/Infos">Infos</Link>

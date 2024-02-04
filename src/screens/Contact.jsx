@@ -340,6 +340,7 @@ const ContactForm = () => {
                       <option value="Sonntag Abbau">Sonntag Abbau</option>
                       <option value="Kuchen">Kuchen</option>
                       <option value="Büffet">Büffet</option>
+                      <option value="-">-</option>
                     </select>
                   </label>
                   <br />
@@ -461,7 +462,7 @@ const ContactForm = () => {
                           value={persons.accommodationChoice}
                           onChange={handlePersonChange}
                         >
-                          <option value="">Choose an option</option>
+                          <option value="">Wähle eine Option</option>
                           <option value="Zelt">Zelt</option>
                           <option value="Auto">Auto</option>
                           <option value="Hotel Selbstständig">Hotel (selbstständig)</option>
@@ -480,13 +481,14 @@ const ContactForm = () => {
                           value={persons.supportChoice}
                           onChange={handlePersonChange}
                         >
-                          <option value="">Choose an option</option>
+                          <option value="">Wähle eine Option</option>
                           <option value="Donnerstag Aufbau">
                             Donnerstag Aufbau
                           </option>
                           <option value="Sonntag Abbau">Sonntag Abbau</option>
                           <option value="Kuchen">Kuchen</option>
                           <option value="Büffet">Büffet</option>
+                          <option value="-">-</option>
                         </select>
                       </label>
                       <br />

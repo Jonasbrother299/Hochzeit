@@ -120,7 +120,7 @@ const Navbar = () => {
                     transitionDelay: navOpen ? "0.1s" : "0s",
                   }}
                 >
-                  Kontakt
+                  Rückmeldung
                 </Link>
                 <div className="nav-item-wrapper"></div>
               </motion.li>

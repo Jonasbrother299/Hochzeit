@@ -34,7 +34,7 @@ const Programm = () => {
           </ul>
           <li className="ListHeader">Samstag</li>
           <ul class="nested-list">
-            <li class="nested-listText">Fruhstücksbuffet ab 8 Uhr</li>
+            <li class="nested-listText">Frühstücksbuffet ab 8 Uhr</li>
             <li class="nested-listText">Trauzeremonie ca. 10 Uhr</li>
             <li class="nested-listText">Gemeinsame Bilder</li>
             <li class="nested-listText">
@@ -56,4 +56,5 @@ const Programm = () => {
     </>
   );
 };
+
 export default transition(Programm);
