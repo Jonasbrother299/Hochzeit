@@ -46,6 +46,24 @@ const Infos = () => {
                   </a>
                 </li>
                 <li> Kleidung: Leger. Unbedingt Wetterabhängig</li>
+                <li>Hotelkontingent: <br/>
+
+Wer lieber ins Hotel möchte, kann in folgendem Hotel gerne etwas selbst buchen: 
+
+Gerber Park Hotel, ca 12 Minuten mit dem Auto entfernt.
+
+(auf den Namen Berner ist ein Kontingent an Zimmern vor reserviert)
+
+Einzelzimmer 133€/Nacht
+Doppelzimmer 178€/ Nacht
+<br/>
+Tel:  
+<a className="link" href="tel:+497161946970">+49 7161 946970</a>
+<br/>
+E-Mail: <a className="link" href="mailto:reservierung@gerberpark-hotel.de">reservierung@gerberpark-hotel.de</a> 
+<br/>
+Ihr könnt natürlich auch nach anderen Optionen schauen.
+ </li>
                 <li>Geschenk: <br/> Unser Haushalt ist komplett, <br/> darum wäre es sehr nett,<br/>  wenn ihr an unsere Zukunft denkt,<br/> 
                     und uns Futter für das Sparschwein schenkt 😉
                     </li>
