@@ -44,7 +44,7 @@
 
 .card:nth-child(3) {
     position: relative;
-    background: url("../../assets/Camping.jpeg") center/cover no-repeat;
+    background: url("../../assets/Camping.webp") center/cover no-repeat;
     object-fit: cover;
     /* background-size: 1000px 750px; */
         /* background-attachment: fixed; */
