@@ -149,6 +149,7 @@ body,
 .footerImage {
     width: 100%;
     height: 81.6%;
+    transform: translate(0%, 2%);
     object-fit: cover;
 }
 

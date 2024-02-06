@@ -173,7 +173,7 @@ const Navbar = () => {
                   opacity: navOpen ? "1" : "0",
                 }}
               >
-                <span>Lilith & Bastian</span>
+                <span className="Names">Lilith & Bastian</span>
               </div>
               {/* <div className="nav-social-media">
                 <ul>
