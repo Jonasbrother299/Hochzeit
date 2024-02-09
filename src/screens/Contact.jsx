@@ -246,7 +246,6 @@ const ContactForm = () => {
                   <div>
                     <label>
                       <input
-                      
                         type="checkbox"
                         name="selectedDays"
                         value="Freitag"
@@ -260,7 +259,7 @@ const ContactForm = () => {
                     <label>
                       <input
                        
-                       type="checkbox"
+                        type="checkbox"
                         name="selectedDays"
                         value="Samstag"
                         checked={formData.selectedDays.includes("Samstag")}
@@ -441,7 +440,7 @@ const ContactForm = () => {
                            required
                           name="foodChoice"
                           value={persons.foodChoice}
-                          onChange={handlePersonChange}
+                          onChange={(e) => handlePersonChange(index, e.target.name, e.target.value)}
                         >
                           <option value="">Wähle eine Option</option>
                           <option value="Alles">Alles</option>
@@ -460,7 +459,7 @@ const ContactForm = () => {
                            required
                           name="accommodationChoice"
                           value={persons.accommodationChoice}
-                          onChange={handlePersonChange}
+                          onChange={(e) => handlePersonChange(index, e.target.name, e.target.value)}
                         >
                           <option value="">Wähle eine Option</option>
                           <option value="Zelt">Zelt</option>
@@ -479,7 +478,7 @@ const ContactForm = () => {
                            required
                           name="supportChoice"
                           value={persons.supportChoice}
-                          onChange={handlePersonChange}
+                          onChange={(e) => handlePersonChange(index, e.target.name, e.target.value)}
                         >
                           <option value="">Wähle eine Option</option>
                           <option value="Donnerstag Aufbau">
