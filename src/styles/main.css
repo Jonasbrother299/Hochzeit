@@ -94,6 +94,7 @@ body,
     align-items: center;
     height: 85vh;
     left: 50%;
+    width: 600px;
     transform: translate(-50%, 45%);
     color:  #9bd68f;
     z-index: 3;
@@ -111,7 +112,7 @@ body,
     .hero__title__Rückmeldung {
         transition: 0.5s;
         font-size: 28px;
-        width: 300px;
+        width: 400px;
         z-index: 3;
     }
  }
