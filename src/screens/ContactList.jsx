@@ -70,6 +70,7 @@ const ContactList = () => {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>Coming Days</th>
             <th style={styles.th}>Food Choice</th>
+            <th style={styles.th}>Support Choice</th> {/* Added new header for Support Choice */}
           </tr>
         </thead>
         <tbody>
@@ -80,6 +81,7 @@ const ContactList = () => {
               <td style={styles.td}>{person.email}</td>
               <td style={styles.td}>{person.selectedDays}</td>
               <td style={styles.td}>{person.foodChoice}</td>
+              <td style={styles.td}>{person.supportChoice}</td> {/* Added new row for Support Choice */}
             </tr>
           ))}
         </tbody>
