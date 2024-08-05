@@ -39,30 +39,13 @@ const Infos = () => {
               <ul className="listUL">
                 <li> Datum: 23.-25.8.2024</li>
                 <li>
-                  Location: Uhlandhof (Uhlandhof 1; 73110 Hattenhofen)  
+                  Location: Uhlandhof (Uhlandhof 1; 73110 Hattenhofen) <br/>  
                   <a target="_blank"  className="link"href="https://www.google.com/maps/place/Uhlandhof+1,+73110+Hattenhofen/@48.658989,9.5633567,17z/data=!3m1!4b1!4m6!3m5!1s0x4799a2b0ccab9485:0xd6022570cb58c59b!8m2!3d48.658989!4d9.565937!16s%2Fg%2F11cplcg1kb?entry=ttu">
                      Google Maps
                   </a>
+                  <span>&#8203;</span> (Achtung: Google Maps führt falsch. Kurz vor Hattenhofen links abbiegen(Uhlandhofschild mit Luftballons))
                 </li>
-                <li> Kleidung: Leger. Unbedingt Wetterabhängig</li>
-                <li>Hotelkontingent: <br/>
-
-Wer lieber ins Hotel möchte, kann in folgendem Hotel gerne etwas selbst buchen: 
-
-Gerber Park Hotel, ca 12 Minuten mit dem Auto entfernt.
-
-(auf den Namen Berner ist ein Kontingent an Zimmern vor reserviert)
-
-Einzelzimmer 133€/Nacht
-Doppelzimmer 178€/ Nacht
-<br/>
-Tel:  
-<a className="link" href="tel:+497161946970">+49 7161 946970</a>
-<br/>
-E-Mail: <a className="link" href="mailto:reservierung@gerberpark-hotel.de">reservierung@gerberpark-hotel.de</a> 
-<br/>
-Ihr könnt natürlich auch nach anderen Optionen schauen.
- </li>
+                <li> Kleidung: Leger. Unbedingt Wetterabhängig (😉 Wer unbedingt ium Anzug kommen will, kann im Anzug kommen, ist aber eine draußen Location 😉)</li>
                 <li>Geschenk: <br/> Unser Haushalt ist komplett, <br/> darum wäre es sehr nett,<br/>  wenn ihr an unsere Zukunft denkt,<br/> 
                     und uns Futter für das Sparschwein schenkt 😉
                     </li>
