@@ -45,6 +45,7 @@ const Infos = () => {
                   </a>
                   <span>&#8203;</span> (Achtung: Google Maps führt falsch. Kurz vor Hattenhofen links abbiegen(Uhlandhofschild mit Luftballons))
                 </li>
+                <li className="roterText">Achtung: Radrennen blockiert die Hauptstraße Samstags von ca. 11:30 - 14:00 Uhr. Man kann den Hof in dieser Zeit nicht anfahren und verlassen.</li>
                 <li> Kleidung: Leger. Unbedingt Wetterabhängig (😉 Wer unbedingt ium Anzug kommen will, kann im Anzug kommen, ist aber eine draußen Location 😉)</li>
                 <li>Geschenk: <br/> Unser Haushalt ist komplett, <br/> darum wäre es sehr nett,<br/>  wenn ihr an unsere Zukunft denkt,<br/> 
                     und uns Futter für das Sparschwein schenkt 😉
