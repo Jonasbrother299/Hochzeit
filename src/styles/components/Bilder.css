@@ -1,0 +1,22 @@
+.albumLinkContainer {
+    margin: 50px;
+
+}
+.albumLinkContainer h2 {
+   font-size: 42px;
+
+}
+.albumLinkContainer h3 {
+    font-size: 32px;
+    margin: 20px;
+ }
+
+ .albumLinkContainer a {
+    margin: 20px;
+    font-size: 24px;
+    color: black; 
+ }
+ .albumLinkContainer a:hover {
+    font-size: 24px;
+    color: rgb(0, 68, 215); 
+ }

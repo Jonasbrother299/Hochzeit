@@ -35,7 +35,7 @@ const Home = () => {
       <div className="App">
         <h1 className="hero__title">Bastian & Lilith</h1>
         {/* <h2 className="hero__title__date"> 23-25.8.2024</h2> */}
-        <h2 className="hero__title__Rückmeldung">Bald ist es soweit. Wetter sieht spannend aus. Wir haben ein paar Infos aktualisiert. Wir freuen uns auf euch. </h2>
+        <h2 className="hero__title__Rückmeldung">Die Hochzeit liegt hinter uns, und wir möchten uns herzlich bei euch bedanken, dass ihr diesen besonderen Tag mit uns geteilt habt. Es war unvergesslich! Am Mittwoch gibt es noch weitere Informationen, also schaut gerne nochmal vorbei.</h2>
         <div className="hero__background"></div>
         <Navbar />
       </div>

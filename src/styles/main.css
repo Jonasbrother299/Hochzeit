@@ -87,7 +87,7 @@ body,
 .hero__title__Rückmeldung {
     transition: 0.5s;
     position: absolute;
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -100,6 +100,12 @@ body,
     z-index: 3;
 }
 @media (max-width: 1200px) {
+    .hero__title__Rückmeldung {
+        font-size: 24px;
+    }
+ }
+
+@media (max-width: 700px) {
     .hero__title{
         transition: 0.5s;
      font-size: 42px;
@@ -111,8 +117,8 @@ body,
     }
     .hero__title__Rückmeldung {
         transition: 0.5s;
-        font-size: 28px;
-        width: 400px;
+        font-size: 14px;
+        width: 320px;
         z-index: 3;
     }
  }
