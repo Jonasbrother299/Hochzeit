@@ -16,7 +16,7 @@ const PostWeddingSite = () => {
   <div className='albumLinkContainer'>
    <h2>Hochzeitsalbum von Lilith und Bastian</h2>
    <h3>Album-Link:</h3>
-   <p><a target="_blank" href='www.weddies.de/Lilith+Bastian'>www.weddies.de/Lilith+Bastian</a></p>
+   <p><a target="_blank" href="http://www.weddies.de/Lilith+Bastian">www.weddies.de/Lilith+Bastian</a></p>
   </div>
   </>
   )
